@@ -30,14 +30,43 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.hello {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
+@media (max-width: 600px) {
+  .subDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    background-color: white;
+    width: 70%;
+  }
+  .heading {
+    font-size: 25px;
+
+  }
+}
 @media (max-width: 490px) {
+  .subDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    background-color: white;
+    width: 80%;
+  }
+  .heading {
+    font-size: 22px;
+  }
+  .allButtons {
+    display: block !important;
+  }
+}
+@media (max-width: 400px) {
+  .heading {
+    font-size: 20px;
+  }
   .allButtons {
     display: block !important;
   }

@@ -6,7 +6,7 @@ function App() {
     <div className="mainDiv">
       <div className="subDiv">
         <div className="timerDiv">
-          <h1
+          <h1 className="heading"
             style={{
               color: "white",
               textAlign: "center",
