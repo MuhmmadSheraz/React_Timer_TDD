@@ -1,11 +1,14 @@
 import React from "react";
+import "./actionButton.css"
 const Buttons: React.FC<{ title: string; click: () => void }> = ({
   title,
   click,
 }) => {
   return (
-    <div>
-      <button onClick={click}>{title}</button>
+    <div className="lol">
+      <button className="actionBtn" onClick={click}>
+        {title}
+      </button>
     </div>
   );
 };

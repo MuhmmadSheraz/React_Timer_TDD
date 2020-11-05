@@ -36,14 +36,23 @@ function App() {
     setHours(0);
     setMinutes(0);
   };
+  // <div>{props.hour}:{props.minute}:{props.second}</div>
 
   return (
-    <div className="App">
-      <Timer hour={hours} minute={minutes} second={seconds} />
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-        <Button title="Start" click={start} />
-        <Button title="Reset" click={Reset} />
-        <Button title="Pause" click={pause} />
+    <div className="mainDiv">
+      <div className="subDiv">
+        <div className="timerDiv">
+          <div className="hello">
+            <Timer hour={hours} minute={minutes} second={seconds} />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div className="allButtons"style={{display:"flex"}}>
+              <Button title="Start" click={start} />
+              <Button title="Reset" click={Reset} />
+              <Button title="Pause" click={pause} />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
