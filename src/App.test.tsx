@@ -2,7 +2,6 @@ import React from "react";
 import { shallow } from "enzyme";
 import App from "./App";
 import Timer from "./View/Timer";
-import Button from "./Components/Buttons";
 describe("App", () => {
   let container: any;
 
@@ -18,11 +17,4 @@ describe("App", () => {
   it("should render the Timer Component", () => {
     expect(container.containsMatchingElement(<Timer />)).toEqual(true);
   });
-  // it("should render three <Button />", () => {
-  //   // console.log(container.debug());
-  //   expect(container.find("Buttons").length).toEqual(3);
-  // });
-  // it("should render  <Button /> div", () => {
-  //   expect(container.find(".allButtons").length).toEqual(1);
-  // });
 });
