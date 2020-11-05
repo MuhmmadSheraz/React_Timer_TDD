@@ -16,13 +16,13 @@ const Timer = () => {
           minutes += 1;
           setMinutes(minutes);
         } else if (minutes > 59) {
+          seconds = 0;
+          minutes = 0;
           hours++;
           setHours(hours);
-          minutes = 0;
-          seconds = 0;
         } else {
-          seconds += 1;
           setSeconds(seconds);
+          seconds += 1;
         }
       }, 1000)
     );
