@@ -9,7 +9,7 @@ describe("App", () => {
   beforeEach(() => (container = shallow(<App />)));
 
   it("should render a <div />", () => {
-    expect(container.find("div").length).toEqual(4);
+    expect(container.find("div").length).toEqual(6);
   });
   it("Should render h1 Tag ", () => {
     expect(container.find("h1").text()).toContain("React Timer App");
@@ -18,11 +18,11 @@ describe("App", () => {
   it("should render the Timer Component", () => {
     expect(container.containsMatchingElement(<Timer />)).toEqual(true);
   });
-  // it("should render three <Button />", () => {
-  //   // console.log(container.debug());
-  //   expect(container.find("Buttons").length).toEqual(3);
-  // });
-  // it("should render  <Button /> div", () => {
-  //   expect(container.find(".allButtons").length).toEqual(1);
-  // });
+  it("should render three <Button />", () => {
+    // console.log(container.debug());
+    expect(container.find("Buttons").length).toEqual(3);
+  });
+  it("should render  <Button /> div", () => {
+    expect(container.find(".allButtons").length).toEqual(1);
+  });
 });
