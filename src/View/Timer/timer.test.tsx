@@ -12,7 +12,7 @@ describe("Timer", () => {
     expect(container.find("div").length).toEqual(3);
   });
   it("should render  1 Span", () => {
-    expect(container.find("span").length).toEqual(3);
+    expect(container.find("span").length).toEqual(1);
   });
   it("should render a allButtons Div", () => {
     expect(container.find(".allButtons").length).toEqual(1);
