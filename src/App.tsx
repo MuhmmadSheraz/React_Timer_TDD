@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="mainDiv">
       <div className="subDiv">
-        <div className="timerDiv">
           <h1 className="heading"
             style={{
               color: "white",
@@ -16,6 +15,7 @@ function App() {
           >
             React Timer App
           </h1>
+        <div className="timerDiv">
           <div className="hello">
             <Timer />
           </div>

@@ -4,11 +4,13 @@ import { timerType, Hour } from "../../Types/index";
 import Buttons from "../../Components/Buttons";
 
 const Timer = () => {
+  const [disable, setDisable] = useState(false);
   let [hours, setHours] = useState<Hour>(0);
   let [minutes, setMinutes] = useState<Hour>(0);
   let [seconds, setSeconds] = useState<Hour>(0);
   let [access, setAccess] = useState<any>();
   let start = () => {
+    setDisable(true);
     setAccess(
       setInterval(() => {
         if (seconds > 59) {
@@ -28,9 +30,11 @@ const Timer = () => {
     );
   };
   const pause = () => {
+    setDisable(false);
     clearInterval(access);
   };
   const Reset = () => {
+    setDisable(false);
     clearInterval(access);
     setSeconds(0);
     setHours(0);
@@ -43,9 +47,13 @@ const Timer = () => {
       </span>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="allButtons" style={{ display: "flex" }}>
-          <Buttons title="Start" click={start} />
-          <Buttons title="Reset" click={Reset} />
-          <Buttons title="Pause" click={pause} />
+          {disable ? (
+            <Buttons title="Start" click={start} disable={disable} />
+            ) : (
+              <Buttons title="Start" click={start} disable={false} />
+          )}
+          <Buttons title="Pause" click={pause} disable={false} />
+          <Buttons title="Reset" click={Reset} disable={false} />
         </div>
       </div>
     </div>
